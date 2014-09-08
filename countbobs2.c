@@ -9,15 +9,16 @@ int main(void)
     char* s = malloc(sizeof(char) * 16 + 1);
     scanf("%s", s);
     
-    char cur[3];
+    char cur[4];
+    cur[3] = '\0';
     
     int count = 0;
     int len = strlen(s);
     for (int i = 0; i < len - 2; i++)
     {
-        for (int j = 0; j < 3 && i < i + 3; j++, i++)
+        for (int j = 0, n = i; j < 3; j++, n++)
         {
-            cur[j] = s[i];
+            cur[j] = s[n];
         }
         if (strcmp(cur, "bob") == 0)
         {
