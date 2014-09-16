@@ -20,7 +20,7 @@ int main(void)
         {
             cur[j] = s[n];
         }
-        if (strcmp(cur, "bob") == 0)
+        if (strcmp(cur, "bob") == 0)        // 要用strcmp函数，cur必须是字符串，即cur中要有'\0';
         {
             count++;
         }
